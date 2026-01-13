@@ -29,6 +29,6 @@ app.use("/api/user", userRouter);
 
 //contact routes
 app.use("/api/contact", contactRouter);
-app.listen(process.env.PORT, () => {
+app.listen(port, () => {
   console.log(`server is running at port in ${port}`);
 });
