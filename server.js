@@ -8,7 +8,7 @@ import { config } from "dotenv";
 const app = express();
 app.use(bodyParser.json()); //app.use(bodyParser.json()); is needed so your Express app can understand JSON data sent in requests. Without it, req.body would be undefined when the client sends JSON.
 config({path:'.env'})
-const port = process.env.PORT;
+const port = process.env.PORT || 2000;
 
 mongoose
   .connect(
