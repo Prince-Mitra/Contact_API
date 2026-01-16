@@ -3,11 +3,12 @@ import mongoose from "mongoose";
 import userRouter from "./Routes/user.js";
 import bodyParser from "body-parser";
 import contactRouter from "./Routes/contact.js";
-import { config } from "dotenv";
+import { config } from "dotenv"; //imp
 
 const app = express();
 app.use(bodyParser.json()); //app.use(bodyParser.json()); is needed so your Express app can understand JSON data sent in requests. Without it, req.body would be undefined when the client sends JSON.
-config({path:'.env'})
+
+config({path:'.env'}) // imp
 const port = process.env.PORT || 2000;
 
 mongoose
